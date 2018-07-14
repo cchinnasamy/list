@@ -12,12 +12,12 @@ ext_modules = []
 
 if use_cython:
     ext_modules.append(Extension("joblist.trees_cython", ['joblist/trees_cython.pyx']))
-    ext_modules.append(Extension('joblist', ['joblist/Lookup_data_new_v2.pickle']))
     cmdclass.update({'build_ext': build_ext})
 else:
     ext_modules.append(Extension("joblist.trees_cython", ['joblist/trees_cython.c']))
-    ext_modules.append(Extension('joblist', ['joblist/Lookup_data_new_v2.pickle']))
 
+
+#ext_modules.append(Extension('joblist', ['joblist/Lookup_data_new_v2.pickle']))
 setup(name='joblist',
       version='0.2',
       description="A Python implementation of pydepth",
@@ -26,6 +26,7 @@ setup(name='joblist',
       author_email="mail2.sella@gmail.com",
       install_requires=['w3lib'],
       packages=find_packages(),
+      include_package_data=True,
       cmdclass=cmdclass,
       ext_modules=ext_modules
 )
