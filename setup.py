@@ -15,6 +15,7 @@ if use_cython:
     cmdclass.update({'build_ext': build_ext})
 else:
     ext_modules.append(Extension("joblist.trees_cython", ['joblist/trees_cython.c']))
+    ext_modules.append(Extension('joblist', ['joblist/Lookup_data_new_v2.pickle']))
 
 setup(name='joblist',
       version='0.2',
