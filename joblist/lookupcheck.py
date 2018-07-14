@@ -1,7 +1,7 @@
 __author__ = 'schinnasamy'
 import pickle
 import os
-from django.conf import settings
+#from django.conf import settings
 from urlparse import urljoin
 #from django.conf.settings import PROJECT_ROOT
 
