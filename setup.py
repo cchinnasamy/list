@@ -20,14 +20,15 @@ else:
 #ext_modules.append(Extension('joblist', ['joblist/Lookup_data_new_v2.pickle']))
 setup(name='joblist',
       version='0.2',
-      description="A Python implementation of pydepth",
+      description="A Python implementation of joblist",
       long_description="A Python implementation of JobList (Data Extraction with Partial Tree Alignment)",
       author="Sellamani",
       author_email="mail2.sella@gmail.com",
       install_requires=['w3lib'],
       packages=find_packages(),
       include_package_data=True,
-      package_data={'': ['joblist/Lookup_data_new_v2.pickle']},
+      #package_data={'joblist': ['joblist/Lookup_data_new_v2.pickle']},
+      package_data={'joblist': ['*.pickle', 'joblist/Lookup_data_new_v2.pickle']},
       cmdclass=cmdclass,
       ext_modules=ext_modules
 )
