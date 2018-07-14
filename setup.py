@@ -27,6 +27,7 @@ setup(name='joblist',
       install_requires=['w3lib'],
       packages=find_packages(),
       include_package_data=True,
+      package_data={'': ['joblist/Lookup_data_new_v2.pickle']},
       cmdclass=cmdclass,
       ext_modules=ext_modules
 )
