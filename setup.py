@@ -1,5 +1,7 @@
 from setuptools import setup, find_packages
 from distutils.extension import Extension
+
+    
 try:
     from Cython.Distutils import build_ext
 except ImportError:
@@ -17,9 +19,8 @@ else:
     ext_modules.append(Extension("joblist.trees_cython", ['joblist/trees_cython.c']))
 
 
-#ext_modules.append(Extension('joblist', ['joblist/Lookup_data_new_v2.pickle']))
 setup(name='joblist',
-      version='0.2',
+      version='2.0.3',
       description="A Python implementation of joblist",
       long_description="A Python implementation of JobList (Data Extraction with Partial Tree Alignment)",
       author="Sellamani",
